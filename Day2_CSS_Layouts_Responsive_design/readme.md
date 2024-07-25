@@ -568,6 +568,4 @@ By understanding and utilizing media queries effectively, you can create designs
 
 ## Minor Project 
 
-```
-Let's make a profile page using the skills we just learned
-```
+> Let's make a profile page using the skills we just learned
