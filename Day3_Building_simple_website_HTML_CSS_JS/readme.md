@@ -4,7 +4,7 @@
 
 Last time we were not able to create a personal page with semantic HTML tags and basic CSS styling
 
-Let's do it today
+> Let's do it today
 
 
 ## Overview of Website Development 
