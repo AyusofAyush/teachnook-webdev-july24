@@ -999,5 +999,10 @@ export default About;
 
 This small project covers the essentials of React development, including components, props, routing, and a scalable folder structure. It serves as a foundation
 
+**Start application:**
+   ```sh
+   npm start
+   ```
+
 
 -----
