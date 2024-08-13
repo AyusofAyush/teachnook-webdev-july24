@@ -1,6 +1,7 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import AddTodo from '../components/AddTodo';
 
+// snapshot testing
 test('renders input and button', () => {
   render(<AddTodo onAdd={() => {}} />);
   
@@ -11,6 +12,7 @@ test('renders input and button', () => {
   expect(buttonElement).toBeInTheDocument();
 });
 
+// unit test
 test('calls onAdd when form is submitted', () => {
   const onAddMock = jest.fn();
   render(<AddTodo onAdd={onAddMock} />);
@@ -25,6 +27,7 @@ test('calls onAdd when form is submitted', () => {
   expect(onAddMock).toHaveBeenCalledTimes(1);
 });
 
+// mock testing
 test('does not call onAdd if input is empty', () => {
   const onAddMock = jest.fn();
   render(<AddTodo onAdd={onAddMock} />);

@@ -1,6 +1,7 @@
 import { renderHook, act } from '@testing-library/react';
 import useTodos from '../hooks/useTodos';
 
+// unit tests
 test('initializes with an empty list of todos', () => {
   const { result } = renderHook(() => useTodos());
   

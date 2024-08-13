@@ -6,6 +6,7 @@ const todos = [
   { id: 2, text: 'Test Todo 2', completed: true },
 ];
 
+//snapshot testing
 test('renders list of todos', () => {
   render(<TodoList todos={todos} onToggle={() => {}} onDelete={() => {}} />);
   
@@ -16,6 +17,7 @@ test('renders list of todos', () => {
   expect(secondTodoElement).toBeInTheDocument();
 });
 
+//snapshot testing
 test('renders message if no todos are available', () => {
   render(<TodoList todos={[]} onToggle={() => {}} onDelete={() => {}} />);
   

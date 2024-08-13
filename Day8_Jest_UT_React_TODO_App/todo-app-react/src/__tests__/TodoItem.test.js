@@ -7,6 +7,7 @@ const todo = {
   completed: false,
 };
 
+// snapshot testing
 test('renders the todo item text', () => {
   render(<TodoItem todo={todo} onToggle={() => {}} onDelete={() => {}} />);
   
@@ -15,6 +16,7 @@ test('renders the todo item text', () => {
   expect(todoElement).toBeInTheDocument();
 });
 
+// unit test
 test('calls onToggle when the todo text is clicked', () => {
   const onToggleMock = jest.fn();
   render(<TodoItem todo={todo} onToggle={onToggleMock} onDelete={() => {}} />);
@@ -25,6 +27,7 @@ test('calls onToggle when the todo text is clicked', () => {
   expect(onToggleMock).toHaveBeenCalledWith(1);
 });
 
+// unit test
 test('calls onDelete when the delete button is clicked', () => {
   const onDeleteMock = jest.fn();
   render(<TodoItem todo={todo} onToggle={() => {}} onDelete={onDeleteMock} />);

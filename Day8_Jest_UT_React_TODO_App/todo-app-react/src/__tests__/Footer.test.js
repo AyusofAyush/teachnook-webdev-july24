@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import Footer from '../components/Footer';
 
+//snapshot testing
 test('renders the footer with copyright text', () => {
   render(<Footer />);
   
