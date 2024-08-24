@@ -26,7 +26,7 @@ const questions = [
     {
         question: "What does CSS stand for?",
         answers: ["Central Style Sheets", "Cascading Style Sheets", "Cascading Simple Sheets", "Cars SUVs Sailboats"],
-        correct: 2
+        correct: 1
     },
     {
         question: "What year was JavaScript launched?",
