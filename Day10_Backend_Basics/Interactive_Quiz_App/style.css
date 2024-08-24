@@ -1,0 +1,127 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #1f4037, #99f2c8);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.header {
+    background-color: #1f4037;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    border-bottom: 4px solid #99f2c8;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quiz-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+}
+
+.btn {
+    background-color: #1f4037;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #99f2c8;
+    transform: translateY(-2px);
+}
+
+.answer-btn {
+    background-color: #e0e0e0;
+    color: #333;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+}
+
+.answer-btn:hover {
+    background-color: #ccc;
+    transform: translateY(-2px);
+}
+
+.correct {
+    background-color: #28a745 !important;
+    color: white;
+}
+
+.incorrect {
+    background-color: #dc3545 !important;
+    color: white;
+}
+
+#score {
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.congrats {
+    color: #28a745;
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+.try-again {
+    color: #dc3545;
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+.footer {
+    background-color: #1f4037;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    border-top: 4px solid #99f2c8;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 500px) {
+    .quiz-container {
+        padding: 15px;
+    }
+
+    #quiz {
+        font-size: 1em;
+    }
+
+    .btn {
+        padding: 8px 12px;
+        font-size: 0.9em;
+    }
+}
