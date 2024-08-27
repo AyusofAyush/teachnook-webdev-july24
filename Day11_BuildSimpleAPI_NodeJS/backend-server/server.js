@@ -4,7 +4,7 @@ const cors = require('cors');
 const apiRoutes = require('./routes/api');
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 
 // Middleware for logging HTTP requests
 app.use(morgan('dev'));
@@ -13,10 +13,12 @@ app.use(morgan('dev'));
 app.use(express.json()); // Replaces body-parser.json()
 
 // Middleware to enable Cross-Origin Resource Sharing (CORS)
-app.use(cors());
+app.use(cors()); // just for development 
+/* Read about Browser CORS policy */
 
 // Set up API routes
-app.use('/api', apiRoutes);
+app.use('/api/v1', apiRoutes);
+app.use('/api/v2', apiRoutes);
 
 app.get('/', (req, res) => {
     res.send('Welcome to the Express Server!');

@@ -4,6 +4,8 @@ let items = [
     { id: 3, name: 'Item 3', description: 'This is item 3' }
 ];
 
+// service methods for items array
+
 // Get all items
 exports.getAllItems = () => {
     return items;
