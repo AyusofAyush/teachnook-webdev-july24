@@ -1,0 +1,16 @@
+<!-- This file's content will be inserted into the layout's body placeholder -->
+<h1>Simple Blog</h1>
+
+<% if (posts.length === 0) { %>
+    <p>No posts available.</p>
+<% } else { %>
+    <ul class="posts">
+        <% posts.forEach(post => { %>
+            <li>
+                <h2><a href="/post/<%= post.id %>"><%= post.title %></a></h2>
+                <p><%= post.content.substring(0, 200) %>...</p>
+                <small>Posted on <%= new Date(post.created_at).toLocaleString() %></small>
+            </li>
+        <% }) %>
+    </ul>
+<% } %>

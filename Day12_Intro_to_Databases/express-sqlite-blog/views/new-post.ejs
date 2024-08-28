@@ -1,0 +1,13 @@
+<!-- This file's content will be inserted into the layout's body placeholder -->
+<h1>Create a New Post</h1>
+<form action="/new-post" method="POST">
+    <div>
+        <label for="title">Title</label>
+        <input type="text" name="title" id="title" required>
+    </div>
+    <div>
+        <label for="content">Content</label>
+        <textarea name="content" id="content" required></textarea>
+    </div>
+    <button type="submit">Create Post</button>
+</form>

@@ -1,0 +1,24 @@
+<!-- This file's content will be inserted into the layout's body placeholder -->
+<h1><%= post.title %></h1>
+<p><%= post.content %></p>
+<small>Posted on <%= new Date(post.created_at).toLocaleString() %></small>
+
+<h2>Comments</h2>
+<% if (comments.length === 0) { %>
+    <p>No comments yet.</p>
+<% } else { %>
+    <ul class="comments">
+        <% comments.forEach(comment => { %>
+            <li>
+                <p><%= comment.content %></p>
+                <small>Posted on <%= new Date(comment.created_at).toLocaleString() %></small>
+            </li>
+        <% }) %>
+    </ul>
+<% } %>
+
+<h3>Add a Comment</h3>
+<form action="/post/<%= post.id %>/comment" method="POST">
+    <textarea name="content" required></textarea>
+    <button type="submit">Submit</button>
+</form>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Blog</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/new-post">New Post</a>
+        </nav>
+    </header>
+    <main>
+        <!-- This is where the content from other EJS files will be included -->
+        <%- body %>
+    </main>
+    <footer>
+        <p>&copy; <%= new Date().getFullYear() %> Simple Blog</p>
+    </footer>
+</body>
+</html>
