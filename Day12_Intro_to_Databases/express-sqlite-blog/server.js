@@ -14,7 +14,7 @@ app.use(express.static('public'));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
-// Middleware to render layout
+// custom Middleware function to render layout
 app.use(async (req, res, next) => {
     res.renderWithLayout = async (view, options) => {
         options = options || {};
