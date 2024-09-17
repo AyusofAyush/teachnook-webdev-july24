@@ -27,7 +27,8 @@ app.use(session({
   store: MongoStore.create({ mongoUrl: config.mongoURI }),
 }));
 
-app.use(authRoutes);
+app.use('/v1', authRoutes); // backward compartibility 
+app.use('/v2', authRoutes);
 app.use(userRoutes);
 
 app.get('/', (req, res) => res.render('home'));
