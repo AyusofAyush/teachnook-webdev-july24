@@ -1,34 +1,40 @@
-require("dotenv").config();
 const express = require("express");
-const morgan = require('morgan');
-const cors = require('cors');
+const dotenv = require("dotenv");
+const morgan = require("morgan");
+const cors = require("cors");
 const connectDB = require("./config/db");
-const productRoutes = require("./routes/productRoutes");
-const categoryRoutes = require("./routes/categoryRoutes");
-const orderRoutes = require("./routes/orderRoutes");
-const userRoutes = require("./routes/userRoutes");
 const { errorHandler } = require("./utils/errorHandler");
-const { protect } = require('./middleware/authMiddleware');
 
+// Load environment variables
+dotenv.config();
+
+// Connect to MongoDB
 connectDB();
+
 const app = express();
 
+// Middleware
 app.use(express.json());
-
-// Use Morgan for logging
-app.use(morgan(':method :url :status :res[content-length] - :response-time ms'));
-
 app.use(cors());
 
-// Use routes
-app.use('/api/v1/users', userRoutes);
-app.use('/api/v1/categories', protect, categoryRoutes);
-app.use('/api/v1/orders', protect, orderRoutes);
-app.use('/api/v1/products', protect, productRoutes);
+// Use Morgan for logging
+app.use(
+  morgan(":method :url :status :res[content-length] - :response-time ms")
+);
 
-// Global error handling middleware
+// Routes
+app.use("/api/v1/users", require("./routes/userRoutes"));
+app.use("/api/v1/categories", require("./routes/categoryRoutes"));
+app.use("/api/v1/orders", require("./routes/orderRoutes"));
+app.use("/api/v1/products", require("./routes/productRoutes"));
+
+// Global Error Handler
 app.use(errorHandler);
 
+// Define PORT
 const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+// Start Server
+app.listen(PORT, () => {
+  console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`);
+});

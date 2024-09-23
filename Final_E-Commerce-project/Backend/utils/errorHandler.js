@@ -3,33 +3,35 @@ class ErrorResponse extends Error {
     super(message);
     this.statusCode = statusCode;
 
-    // Capture stack trace
+    // Capture stack trace (optional)
     Error.captureStackTrace(this, this.constructor);
   }
 }
 
-// Error Handler which takes cares of all the generic error in the application
 const errorHandler = (err, req, res, next) => {
   let error = { ...err };
   error.message = err.message;
 
-  // Log error for developer
-  console.log(err.stack);
+  // Log error stack for debugging
+  console.error(err.stack);
 
-  // Handle specific errors
+  // Mongoose bad ObjectId
   if (err.name === "CastError") {
-    error = new ErrorResponse(
-      `Resource not found with id of ${err.value}`,
-      404
-    );
+    const message = `Resource not found with id of ${err.value}`;
+    error = new ErrorResponse(message, 404);
   }
 
+  // Mongoose duplicate key
   if (err.code === 11000) {
-    error = new ErrorResponse("Duplicate field value entered", 400);
+    const message = "Duplicate field value entered";
+    error = new ErrorResponse(message, 400);
   }
 
+  // Mongoose validation error
   if (err.name === "ValidationError") {
-    const message = Object.values(err.errors).map((val) => val.message);
+    const message = Object.values(err.errors)
+      .map((val) => val.message)
+      .join(", ");
     error = new ErrorResponse(message, 400);
   }
 
@@ -39,7 +41,4 @@ const errorHandler = (err, req, res, next) => {
   });
 };
 
-module.exports = {
-  ErrorResponse,
-  errorHandler
-};
+module.exports = { ErrorResponse, errorHandler };

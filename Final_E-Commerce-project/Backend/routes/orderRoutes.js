@@ -1,17 +1,25 @@
-const express = require('express');
-const { createOrder, getOrders, getOrder, updateOrder, deleteOrder } = require('../controllers/orderController');
-const { protect } = require('../middleware/authMiddleware');
-const { authorizeRoles } = require('../middleware/roleMiddleware');
-
+const express = require("express");
 const router = express.Router();
+const orderController = require("../controllers/orderController");
+const { protect, authorizeRoles } = require("../middleware/authMiddleware");
 
-router.route('/')
-  .post(protect, createOrder)
-  .get(protect, authorizeRoles('admin'), getOrders);
+// User routes
+router.post("/", protect, orderController.createOrder);
+router.get("/", protect, authorizeRoles("admin"), orderController.getOrders);
 
-router.route('/:id')
-  .get(protect, getOrder)
-  .put(protect, authorizeRoles('admin'), updateOrder)
-  .delete(protect, authorizeRoles('admin'), deleteOrder);
+// Admin routes
+router.get("/:id", protect, authorizeRoles("admin"), orderController.getOrder);
+router.put(
+  "/:id",
+  protect,
+  authorizeRoles("admin"),
+  orderController.updateOrder
+);
+router.delete(
+  "/:id",
+  protect,
+  authorizeRoles("admin"),
+  orderController.deleteOrder
+);
 
 module.exports = router;

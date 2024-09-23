@@ -348,7 +348,7 @@ Below is a list of all the APIs for your backend server, organized by functional
   - **Request Body**: `{ "name": "string", "email": "string", "password": "string" }`
   - **Example**:
     ```bash
-    curl -X POST http://localhost:5000/api/v1/users/register \
+    curl -X POST http://localhost:4000/api/v1/users/register \
     -H "Content-Type: application/json" \
     -d '{"name": "John Doe", "email": "john@example.com", "password": "password123"}'
     ```
@@ -358,7 +358,7 @@ Below is a list of all the APIs for your backend server, organized by functional
   - **Request Body**: `{ "email": "string", "password": "string" }`
   - **Example**:
     ```bash
-    curl -X POST http://localhost:5000/api/v1/users/login \
+    curl -X POST http://localhost:4000/api/v1/users/login \
     -H "Content-Type: application/json" \
     -d '{"email": "john@example.com", "password": "password123"}'
     ```
@@ -369,7 +369,7 @@ Below is a list of all the APIs for your backend server, organized by functional
   - **Headers**: `Authorization: Bearer <token>`
   - **Example**:
     ```bash
-    curl -X GET http://localhost:5000/api/v1/users/profile \
+    curl -X GET http://localhost:4000/api/v1/users/profile \
     -H "Authorization: Bearer <token>"
     ```
 
@@ -379,7 +379,7 @@ Below is a list of all the APIs for your backend server, organized by functional
   - **Headers**: `Authorization: Bearer <token>`
   - **Example**:
     ```bash
-    curl -X PUT http://localhost:5000/api/v1/users/profile \
+    curl -X PUT http://localhost:4000/api/v1/users/profile \
     -H "Content-Type: application/json" \
     -H "Authorization: Bearer <token>" \
     -d '{"name": "John Doe", "email": "john.doe@example.com", "password": "newpassword123"}'
@@ -391,7 +391,7 @@ Below is a list of all the APIs for your backend server, organized by functional
   - **Headers**: `Authorization: Bearer <admin-token>`
   - **Example**:
     ```bash
-    curl -X GET http://localhost:5000/api/v1/users \
+    curl -X GET http://localhost:4000/api/v1/users \
     -H "Authorization: Bearer <admin-token>"
     ```
 
@@ -400,7 +400,7 @@ Below is a list of all the APIs for your backend server, organized by functional
   - **Headers**: `Authorization: Bearer <admin-token>`
   - **Example**:
     ```bash
-    curl -X GET http://localhost:5000/api/v1/users/1234567890abcdef \
+    curl -X GET http://localhost:4000/api/v1/users/1234567890abcdef \
     -H "Authorization: Bearer <admin-token>"
     ```
 
@@ -409,7 +409,7 @@ Below is a list of all the APIs for your backend server, organized by functional
   - **Headers**: `Authorization: Bearer <admin-token>`
   - **Example**:
     ```bash
-    curl -X DELETE http://localhost:5000/api/v1/users/1234567890abcdef \
+    curl -X DELETE http://localhost:4000/api/v1/users/1234567890abcdef \
     -H "Authorization: Bearer <admin-token>"
     ```
 
@@ -420,7 +420,7 @@ Below is a list of all the APIs for your backend server, organized by functional
   - **Headers**: `Authorization: Bearer <token>`
   - **Example**:
     ```bash
-    curl -X GET http://localhost:5000/api/v1/categories \
+    curl -X GET http://localhost:4000/api/v1/categories \
     -H "Authorization: Bearer <token>"
     ```
 
@@ -430,7 +430,7 @@ Below is a list of all the APIs for your backend server, organized by functional
   - **Headers**: `Authorization: Bearer <token>`
   - **Example**:
     ```bash
-    curl -X POST http://localhost:5000/api/v1/categories \
+    curl -X POST http://localhost:4000/api/v1/categories \
     -H "Content-Type: application/json" \
     -H "Authorization: Bearer <token>" \
     -d '{"name": "Electronics"}'
@@ -442,7 +442,7 @@ Below is a list of all the APIs for your backend server, organized by functional
   - **Headers**: `Authorization: Bearer <token>`
   - **Example**:
     ```bash
-    curl -X PUT http://localhost:5000/api/v1/categories/1234567890abcdef \
+    curl -X PUT http://localhost:4000/api/v1/categories/1234567890abcdef \
     -H "Content-Type: application/json" \
     -H "Authorization: Bearer <token>" \
     -d '{"name": "Home Appliances"}'
@@ -453,7 +453,7 @@ Below is a list of all the APIs for your backend server, organized by functional
   - **Headers**: `Authorization: Bearer <token>`
   - **Example**:
     ```bash
-    curl -X DELETE http://localhost:5000/api/v1/categories/1234567890abcdef \
+    curl -X DELETE http://localhost:4000/api/v1/categories/1234567890abcdef \
     -H "Authorization: Bearer <token>"
     ```
 
@@ -464,7 +464,7 @@ Below is a list of all the APIs for your backend server, organized by functional
   - **Headers**: `Authorization: Bearer <token>`
   - **Example**:
     ```bash
-    curl -X GET http://localhost:5000/api/v1/orders \
+    curl -X GET http://localhost:4000/api/v1/orders \
     -H "Authorization: Bearer <token>"
     ```
 
@@ -474,7 +474,7 @@ Below is a list of all the APIs for your backend server, organized by functional
   - **Headers**: `Authorization: Bearer <token>`
   - **Example**:
     ```bash
-    curl -X POST http://localhost:5000/api/v1/orders \
+    curl -X POST http://localhost:4000/api/v1/orders \
     -H "Content-Type: application/json" \
     -H "Authorization: Bearer <token>" \
     -d '{"productId": "1234567890abcdef", "quantity": 2}'
@@ -485,7 +485,7 @@ Below is a list of all the APIs for your backend server, organized by functional
   - **Headers**: `Authorization: Bearer <token>`
   - **Example**:
     ```bash
-    curl -X GET http://localhost:5000/api/v1/orders/1234567890abcdef \
+    curl -X GET http://localhost:4000/api/v1/orders/1234567890abcdef \
     -H "Authorization: Bearer <token>"
     ```
 
@@ -495,7 +495,7 @@ Below is a list of all the APIs for your backend server, organized by functional
   - **Headers**: `Authorization: Bearer <token>`
   - **Example**:
     ```bash
-    curl -X PUT http://localhost:5000/api/v1/orders/1234567890abcdef \
+    curl -X PUT http://localhost:4000/api/v1/orders/1234567890abcdef \
     -H "Content-Type: application/json" \
     -H "Authorization: Bearer <token>" \
     -d '{"status": "shipped"}'
@@ -506,7 +506,7 @@ Below is a list of all the APIs for your backend server, organized by functional
   - **Headers**: `Authorization: Bearer <token>`
   - **Example**:
     ```bash
-    curl -X DELETE http://localhost:5000/api/v1/orders/1234567890abcdef \
+    curl -X DELETE http://localhost:4000/api/v1/orders/1234567890abcdef \
     -H "Authorization: Bearer <token>"
     ```
 
@@ -517,7 +517,7 @@ Below is a list of all the APIs for your backend server, organized by functional
   - **Headers**: `Authorization: Bearer <token>`
   - **Example**:
     ```bash
-    curl -X GET http://localhost:5000/api/v1/products \
+    curl -X GET http://localhost:4000/api/v1/products \
     -H "Authorization: Bearer <token>"
     ```
 
@@ -527,7 +527,7 @@ Below is a list of all the APIs for your backend server, organized by functional
   - **Headers**: `Authorization: Bearer <token>`
   - **Example**:
     ```bash
-    curl -X POST http://localhost:5000/api/v1/products \
+    curl -X POST http://localhost:4000/api/v1/products \
     -H "Content-Type: application/json" \
     -H "Authorization: Bearer <token>" \
     -d '{"name": "Laptop", "price": 999.99, "categoryId": "1234567890abcdef"}'
@@ -538,7 +538,7 @@ Below is a list of all the APIs for your backend server, organized by functional
   - **Headers**: `Authorization: Bearer <token>`
   - **Example**:
     ```bash
-    curl -X GET http://localhost:5000/api/v1/products/1234567890abcdef \
+    curl -X GET http://localhost:4000/api/v1/products/1234567890abcdef \
     -H "Authorization: Bearer <token>"
     ```
 
@@ -548,7 +548,7 @@ Below is a list of all the APIs for your backend server, organized by functional
   - **Headers**: `Authorization: Bearer <token>`
   - **Example**:
     ```bash
-    curl -X PUT http://localhost:5000/api/v1/products/1234567890abcdef \
+    curl -X PUT http://localhost:4000/api/v1/products/1234567890abcdef \
     -H "Content-Type: application/json" \
     -H "Authorization: Bearer <token>" \
     -d '{"name": "Gaming Laptop", "price": 1299.
@@ -561,7 +561,7 @@ Below is a list of all the APIs for your backend server, organized by functional
   - **Headers**: `Authorization: Bearer <token>`
   - **Example**:
     ```bash
-    curl -X DELETE http://localhost:5000/api/v1/products/1234567890abcdef \
+    curl -X DELETE http://localhost:4000/api/v1/products/1234567890abcdef \
     -H "Authorization: Bearer <token>"
     ```
 
@@ -624,3 +624,180 @@ Make sure to replace placeholders like `<token>` and `<admin-token>` with actual
 This setup covers the core functionality and testing scenarios for your backend e-commerce application.
 
 -----
+
+## cURL commands List
+**Updated cURL commands List** 
+
+Here’s the complete list of `cURL` commands for testing all the scenarios of your e-commerce backend application:
+
+### **1. Authentication APIs**
+
+#### **1.1 Register a User**
+```bash
+curl -X POST http://localhost:5000/api/v1/auth/register \
+-H "Content-Type: application/json" \
+-d '{"name":"John Doe", "email":"john@example.com", "password":"password123", "profile_img":"http://example.com/profile.jpg"}'
+```
+
+#### **1.2 Login a User**
+```bash
+curl -X POST http://localhost:5000/api/v1/auth/login \
+-H "Content-Type: application/json" \
+-d '{"email":"john@example.com", "password":"password123"}'
+```
+
+#### **1.3 Get Logged-in User Profile**
+```bash
+curl -X GET http://localhost:5000/api/v1/auth/profile \
+-H "Authorization: Bearer <your_token>"
+```
+
+#### **1.4 Update User Profile**
+```bash
+curl -X PUT http://localhost:5000/api/v1/auth/profile \
+-H "Authorization: Bearer <your_token>" \
+-H "Content-Type: application/json" \
+-d '{"name":"Updated Name", "profile_img":"http://example.com/updated_profile.jpg"}'
+```
+
+---
+
+### **2. User Management APIs (Admin Only)**
+
+#### **2.1 Get All Users**
+```bash
+curl -X GET http://localhost:5000/api/v1/users \
+-H "Authorization: Bearer <admin_token>"
+```
+
+#### **2.2 Get a Single User by ID**
+```bash
+curl -X GET http://localhost:5000/api/v1/users/<user_id> \
+-H "Authorization: Bearer <admin_token>"
+```
+
+#### **2.3 Delete a User by ID**
+```bash
+curl -X DELETE http://localhost:5000/api/v1/users/<user_id> \
+-H "Authorization: Bearer <admin_token>"
+```
+
+---
+
+### **3. Product Management APIs**
+
+#### **3.1 Create a Product**
+```bash
+curl -X POST http://localhost:5000/api/v1/products \
+-H "Authorization: Bearer <admin_token>" \
+-H "Content-Type: application/json" \
+-d '{"name":"Product A", "price":100, "description":"A great product", "category":"<category_id>", "stock":10, "product_img":"http://example.com/product.jpg"}'
+```
+
+#### **3.2 Get All Products**
+```bash
+curl -X GET http://localhost:5000/api/v1/products
+```
+
+#### **3.3 Get a Single Product by ID**
+```bash
+curl -X GET http://localhost:5000/api/v1/products/<product_id>
+```
+
+#### **3.4 Update a Product by ID**
+```bash
+curl -X PUT http://localhost:5000/api/v1/products/<product_id> \
+-H "Authorization: Bearer <admin_token>" \
+-H "Content-Type: application/json" \
+-d '{"name":"Updated Product A", "price":150, "product_img":"http://example.com/updated_product.jpg"}'
+```
+
+#### **3.5 Delete a Product by ID**
+```bash
+curl -X DELETE http://localhost:5000/api/v1/products/<product_id> \
+-H "Authorization: Bearer <admin_token>"
+```
+
+---
+
+### **4. Category Management APIs**
+
+#### **4.1 Create a Category**
+```bash
+curl -X POST http://localhost:5000/api/v1/categories \
+-H "Authorization: Bearer <admin_token>" \
+-H "Content-Type: application/json" \
+-d '{"name":"Category A"}'
+```
+
+#### **4.2 Get All Categories**
+```bash
+curl -X GET http://localhost:5000/api/v1/categories
+```
+
+#### **4.3 Get a Single Category by ID**
+```bash
+curl -X GET http://localhost:5000/api/v1/categories/<category_id>
+```
+
+#### **4.4 Update a Category by ID**
+```bash
+curl -X PUT http://localhost:5000/api/v1/categories/<category_id> \
+-H "Authorization: Bearer <admin_token>" \
+-H "Content-Type: application/json" \
+-d '{"name":"Updated Category A"}'
+```
+
+#### **4.5 Delete a Category by ID**
+```bash
+curl -X DELETE http://localhost:5000/api/v1/categories/<category_id> \
+-H "Authorization: Bearer <admin_token>"
+```
+
+---
+
+### **5. Order Management APIs**
+
+#### **5.1 Create an Order**
+```bash
+curl -X POST http://localhost:5000/api/v1/orders \
+-H "Authorization: Bearer <user_token>" \
+-H "Content-Type: application/json" \
+-d '{"products":[{"product_id":"<product_id>","quantity":2}],"totalPrice":200}'
+```
+
+#### **5.2 Get All Orders**
+```bash
+curl -X GET http://localhost:5000/api/v1/orders \
+-H "Authorization: Bearer <admin_token>"
+```
+
+#### **5.3 Get a Single Order by ID**
+```bash
+curl -X GET http://localhost:5000/api/v1/orders/<order_id> \
+-H "Authorization: Bearer <user_token>"
+```
+
+#### **5.4 Update an Order by ID**
+```bash
+curl -X PUT http://localhost:5000/api/v1/orders/<order_id> \
+-H "Authorization: Bearer <admin_token>" \
+-H "Content-Type: application/json" \
+-d '{"status":"shipped"}'
+```
+
+#### **5.5 Delete an Order by ID**
+```bash
+curl -X DELETE http://localhost:5000/api/v1/orders/<order_id> \
+-H "Authorization: Bearer <admin_token>"
+```
+
+---
+
+### **Notes**
+- Replace `<your_token>`, `<admin_token>`, `<user_token>`, `<user_id>`, `<product_id>`, `<category_id>`, and `<order_id>` with actual values as needed for your tests.
+- Ensure your server is running and accessible at `http://localhost:5000` (or change the URL accordingly). 
+
+You can use these commands to test the functionalities of your backend application. Let me know if you need any further assistance!
+
+----

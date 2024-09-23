@@ -1,17 +1,29 @@
-const express = require('express');
-const { createProduct, getProducts, getProduct, updateProduct, deleteProduct } = require('../controllers/productController');
-const { protect, admin } = require('../middleware/authMiddleware');
-const { authorizeRoles } = require('../middleware/roleMiddleware');
-
+const express = require("express");
 const router = express.Router();
+const productController = require("../controllers/productController");
+const { protect, authorizeRoles } = require("../middleware/authMiddleware");
 
-router.route('/')
-  .post(protect, authorizeRoles('admin'), createProduct)
-  .get(getProducts);
+// Public route to get all products
+router.get("/", protect, productController.getProducts);
 
-router.route('/:id')
-  .get(getProduct)
-  .put(protect, authorizeRoles('admin'), updateProduct)
-  .delete(protect, authorizeRoles('admin'), deleteProduct);
+// Admin-only routes to create, update, and delete products
+router.post(
+  "/",
+  protect,
+  authorizeRoles("admin"),
+  productController.createProduct
+);
+router.put(
+  "/:id",
+  protect,
+  authorizeRoles("admin"),
+  productController.updateProduct
+);
+router.delete(
+  "/:id",
+  protect,
+  authorizeRoles("admin"),
+  productController.deleteProduct
+);
 
 module.exports = router;

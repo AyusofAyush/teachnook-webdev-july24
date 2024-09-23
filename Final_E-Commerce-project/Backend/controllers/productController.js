@@ -14,19 +14,19 @@ exports.getProducts = asyncHandler(async (req, res) => {
   sendResponse(res, 200, products, 'Products retrieved successfully');
 });
 
-// Get a single product
+// Get a single product by ID
 exports.getProduct = asyncHandler(async (req, res) => {
   const product = await productService.getProduct(req.params.id);
   sendResponse(res, 200, product, 'Product retrieved successfully');
 });
 
-// Update a product
+// Update a product by ID
 exports.updateProduct = asyncHandler(async (req, res) => {
   const product = await productService.updateProduct(req.params.id, req.body);
   sendResponse(res, 200, product, 'Product updated successfully');
 });
 
-// Delete a product
+// Delete a product by ID
 exports.deleteProduct = asyncHandler(async (req, res) => {
   await productService.deleteProduct(req.params.id);
   sendResponse(res, 200, null, 'Product deleted successfully');

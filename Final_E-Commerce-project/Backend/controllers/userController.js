@@ -1,6 +1,7 @@
 const userService = require('../services/userService');
 const asyncHandler = require('../utils/asyncHandler');
 const sendResponse = require('../utils/responseHandler');
+const ErrorResponse = require('../utils/errorHandler');
 
 // Register a new user
 exports.registerUser = asyncHandler(async (req, res) => {
@@ -32,13 +33,13 @@ exports.getUsers = asyncHandler(async (req, res) => {
   sendResponse(res, 200, users, 'Users retrieved successfully');
 });
 
-// Admin: Get a single user
+// Admin: Get single user by ID
 exports.getUser = asyncHandler(async (req, res) => {
   const user = await userService.getUser(req.params.id);
   sendResponse(res, 200, user, 'User retrieved successfully');
 });
 
-// Admin: Delete a user
+// Admin: Delete user by ID
 exports.deleteUser = asyncHandler(async (req, res) => {
   await userService.deleteUser(req.params.id);
   sendResponse(res, 200, null, 'User deleted successfully');

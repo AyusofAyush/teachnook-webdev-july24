@@ -1,10 +1,10 @@
-const ErrorResponse = require('../utils/errorHandler').ErrorResponse;
+const ErrorResponse = require('../utils/errorHandler');
 
-// Restrict routes to certain roles
-exports.authorizeRoles = (...roles) => {
+// Restrict access based on user roles
+exports.checkRole = (...roles) => {
   return (req, res, next) => {
     if (!roles.includes(req.user.role)) {
-      return next(new ErrorResponse(`User role '${req.user.role}' is not authorized to access this route`, 403));
+      return next(new ErrorResponse(`User role '${req.user.role}' is not authorized`, 403));
     }
     next();
   };
