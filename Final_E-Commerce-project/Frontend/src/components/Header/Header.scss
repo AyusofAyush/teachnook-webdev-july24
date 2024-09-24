@@ -1,3 +1,39 @@
 .header-parent {
-    background-color: yellow;
+    // background-color: yellow;
+    padding: 1% 5%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+  .header-brand {
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 2px;
+  }
+
+  .nav-section {
+    .nav-parent {
+      .nav-items {
+        .nav-links {
+          font-size: 16px;
+          text-transform: uppercase;
+          font-weight: 400;
+          padding: 16px;
+          margin-right: 10px;
+          cursor: pointer;
+          a,
+          a:focus,
+          a:visited {
+            text-decoration: none;
+            color: var(--black);
+          }
+        }
+      }
+      span {
+        padding: 10px;
+        font-size: 24px;
+      }
+    }
+  }
 }

@@ -1,0 +1,33 @@
+.hero-parent {
+  min-height: 713px;
+  background-image: url("../../../Assets/background.jpg");
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-width: 100%;
+  position: relative;
+  .hero-section {
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    transform: translate(25%, -25%);
+    gap: 20px;
+    z-index: 1;
+
+    h1 {
+      color: var(--hero-header);
+      font-size: 80px;
+      text-transform: uppercase;
+      line-height: 1em;
+      letter-spacing: 10px;
+      font-weight: 500;
+    }
+    h3 {
+      color: #050505;
+      font-size: 40px;
+      font-weight: 300;
+      text-transform: uppercase;
+      letter-spacing: 6.3px;
+    }
+  }
+}

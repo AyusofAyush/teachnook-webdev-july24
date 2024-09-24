@@ -6,28 +6,28 @@ import './Header.scss';
 
 function Header() {
   return (
-    <header className="header-parent">
+    <header className="flex header-parent center space-btw">
       <section className="header-brand">COOL E-SHOP</section>
       <section className="nav-section">
-        <div className="nav-parent">
-          <ul className="nav-items">
-            <li className="nav-links">
+        <div className="flex nav-parent">
+          <ul className="flex nav-items center w-100">
+            <li className="flex nav-links center">
               <Link to={"/"}>Home</Link>
             </li>
-            <li className="nav-links">
+            <li className="flex nav-links center">
               <Link to={"/about"}>About</Link>
             </li>
-            <li className="nav-links">
+            <li className="flex nav-links center">
               <Link to={"/shop"}>Shop</Link>
             </li>
-            <li className="nav-links">
+            <li className="flex nav-links center">
               <Link to={"/contact"}>Contact</Link>
             </li>
           </ul>
-          <span className="cart-logo">
+          <span className="flex center cart-logo">
             <FontAwesomeIcon icon={faShoppingCart} />
           </span>
-          <span className="profile-logo">
+          <span className="flex center profile-logo">
             <FontAwesomeIcon icon={faUser} />
           </span>
         </div>
