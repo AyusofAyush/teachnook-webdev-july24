@@ -1,0 +1,14 @@
+.about-parent {
+  .hero-parent {
+    background-image: url("../../Assets/about-bg.jpg");
+    background-position: bottom center;
+  }
+
+  .mission-section {
+    .mission-message {
+      p {
+        line-height: 1.5;
+      }
+    }
+  }
+}

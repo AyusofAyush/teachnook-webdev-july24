@@ -4,13 +4,19 @@ import Header from "../../components/Header/Header";
 import { FeatureProducts } from "../../utils/constants";
 import Card from "../../components/Card/Card";
 import HeroSection from "../../components/HeroSection/HeroSection";
+import PostcardSection from "../../components/PostcardSection/PostcardSection";
+import Footer from "../../components/Footer/Footer";
 
 function Home() {
   return (
     <div className="home-parent">
       <Header />
-      <HeroSection />
-      <section className="flex feature-products center">
+      <HeroSection
+        HeroTitle={"EARTH"}
+        HeroDesc={"Multipurpose Store"}
+        HeroBtnText={"Shop Now"}
+      />
+      <section className="flex feature-products center mb-16 divide-solid border-solid">
         {FeatureProducts?.map((product) => {
           return (
             <Card
@@ -22,6 +28,9 @@ function Home() {
           );
         })}
       </section>
+      <section className="flex customer-section center my-[10%] "></section>
+      <PostcardSection />
+      <Footer />
     </div>
   );
 }
