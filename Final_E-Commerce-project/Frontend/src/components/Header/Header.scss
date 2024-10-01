@@ -1,11 +1,11 @@
 .header-parent {
-    // background-color: yellow;
-    padding: 1% 5%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 2;
+  // background-color: yellow;
+  padding: 1% 5%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
   .header-brand {
     font-size: 28px;
     font-weight: 600;
@@ -34,6 +34,19 @@
         padding: 10px;
         font-size: 24px;
       }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+
+  @media screen and (max-width: 480px) {
+    .nav-parent {
+      ul {
+        flex-direction: column;
+      }
+      flex-direction: column;
     }
   }
 }

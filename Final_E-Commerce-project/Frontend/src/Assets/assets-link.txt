@@ -4,3 +4,19 @@ img3: https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022
 img4: https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/11/Postcard1-1000x1000.jpg
 img5: https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/PostcardV2-min-1000x1000.jpg
 img6: 
+
+
+// Shop images - 12
+
+https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/11/Postcard1-1000x1000.jpg
+https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/PostcardV2-min-1000x1000.jpg
+https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/11/Postcard3-1000x1000.jpg
+https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/Postcard-6-min-1000x1000.jpg
+https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/PostcardV5-min-1000x1000.jpg
+https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2021/08/PostcardV6-1000x1000.jpg
+https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/Poster5-1000x1000.jpg
+https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/Poster6-1000x1000.jpg
+https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/Poster4-1000x1000.jpg
+https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/Poster2-1000x1000.jpg
+https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/Poster3-1000x1000.jpg
+https://websitedemos.net/earth-store-02/wp-content/uploads/sites/1171/2022/10/Poster1-1000x1000.jpg

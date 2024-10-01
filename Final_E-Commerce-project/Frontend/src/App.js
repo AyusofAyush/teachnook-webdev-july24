@@ -4,8 +4,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
+import Shop from "./pages/Shop/Shop";
 // lazy load the components in React
-const Shop = lazy(() => import("./pages/Shop/Shop"));
+// const Shop = lazy(() => import("./pages/Shop/Shop"));
 
 function App() {
   return (

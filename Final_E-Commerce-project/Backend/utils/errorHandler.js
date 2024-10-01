@@ -4,7 +4,7 @@ class ErrorResponse extends Error {
     this.statusCode = statusCode;
 
     // Capture stack trace (optional)
-    Error.captureStackTrace(this, this.constructor);
+    // Error.captureStackTrace(this, this.constructor);
   }
 }
 

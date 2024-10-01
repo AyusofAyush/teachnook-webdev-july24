@@ -1,0 +1,15 @@
+.shop-parent {
+  // border-top: 0.5px solid black;
+  margin-top: 100px;
+  .shop-grid {
+    border-top: 0.5px solid black;
+    h1 {
+      font-size: 70px;
+      color: var(--shop-btn);
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    margin-top: 400px;
+  }
+}

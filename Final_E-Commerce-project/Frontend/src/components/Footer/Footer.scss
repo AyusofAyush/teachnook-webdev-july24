@@ -1,7 +1,12 @@
 .footer-parent {
+    border-top: 0.5px solid black;
     .nav-section {
         .nav-items {
             gap: 12px;
         }
+    }
+    @media screen and (max-width: 480px) {
+        flex-direction: column;
+        gap: 5px;
     }
 }

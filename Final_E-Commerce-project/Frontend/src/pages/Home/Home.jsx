@@ -16,7 +16,7 @@ function Home() {
         HeroDesc={"Multipurpose Store"}
         HeroBtnText={"Shop Now"}
       />
-      <section className="flex feature-products center mb-16 divide-solid border-solid">
+      <section className="flex feature-products center mb-16 divide-solid border-solid wrap">
         {FeatureProducts?.map((product) => {
           return (
             <Card

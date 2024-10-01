@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function Footer() {
   return (
     <div className="flex footer-parent px-[3%] py-[2%] space-btw">
-      <section className="nav-section">
+      <section className="flex nav-section center">
         <ul className="flex nav-items center w-100">
           <li className="flex nav-links center">
             <Link to={"/"}>Home</Link>
@@ -21,8 +21,8 @@ function Footer() {
           </li>
         </ul>
       </section>
-      <section className="header-brand font-semibold text-xl">COOL E-SHOP</section>
-      <section className="copyright-section text-sm">
+      <section className="flex center header-brand font-semibold text-xl">COOL E-SHOP</section>
+      <section className="flex center copyright-section text-sm">
         Copyright © {new Date().getFullYear()} COOL E-SHOP
       </section>
     </div>
